@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Naval Project — Well Conductor Analysis, 3D</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <canvas id="scene" aria-label="3D model of rig, riser, subsea stack and well"></canvas>
+  <div id="labels" data-zoom="far"></div>
+
+  <nav id="nav" class="glass" aria-label="Chapters">
+    <header><h1>Naval Project</h1><p>Well conductor analysis — moored semi-sub MODU</p></header>
+    <div class="seg mode" role="group" aria-label="Mode"><button id="modeStory">Story</button><button id="modeExplore">Explore</button></div>
+    <div id="chapters"></div>
+    <footer>Every value is clickable for its source, page and table. Identities anonymised.</footer>
+  </nav>
+
+  <div id="scaleBadge" class="glass"></div>
+
+  <aside id="panel" class="glass" aria-live="polite">
+    <header><h2 id="chTitle"></h2><p id="lead"></p></header>
+    <div id="pbody"><div id="comp"></div><div id="insp"></div></div>
+  </aside>
+
+  <div id="bar" class="glass">
+    <div id="story"><button id="prev" aria-label="Previous chapter">‹</button><button id="play">▶ Play story</button><button id="next" aria-label="Next chapter">›</button><div id="progress"><i></i></div></div>
+    <div id="scenario"></div>
+  </div>
+
+  <div id="prov" class="glass" role="dialog" aria-label="Value provenance" hidden></div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

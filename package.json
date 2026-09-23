@@ -1,0 +1,23 @@
+{
+  "name": "naval-project-conductor-viz",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:single": "tsc --noEmit && vite build --mode single",
+    "audit:data": "esbuild src/data/audit.ts --bundle --platform=node --outfile=.audit.cjs --log-level=warning && node .audit.cjs"
+  },
+  "dependencies": {
+    "three": "0.160.1",
+    "gsap": "3.12.5"
+  },
+  "devDependencies": {
+    "@types/three": "0.160.0",
+    "typescript": "5.4.5",
+    "vite": "5.2.11",
+    "vite-plugin-singlefile": "2.0.1",
+    "esbuild": "0.20.2"
+  }
+}
